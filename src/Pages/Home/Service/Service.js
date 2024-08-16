@@ -7,7 +7,7 @@ const Service = ({ service }) => {
    const navigateToService = (id) => {
       navigate(`/service/${id}`);
    };
-   const { id, name, price, img, description } = service;
+   const {_id, name, price, img, description } = service;
    return (
       <div className="service">
          <h2> Name: {name}</h2>
@@ -17,7 +17,7 @@ const Service = ({ service }) => {
             <small>{description}</small>
          </p>
          <button
-            onClick={() => navigateToService(id)}
+            onClick={() => navigateToService(_id)}
             className="btn btn-primary"
          >
             Book this service:{name}
